@@ -2,6 +2,10 @@
 
 Script para ascender maliciosamente en el ranking de github
 
+Dicho de otro modo, como pone en el propio código:
+
+> rankingfaker es una aplicación estúpida para hacer contribuciones espúrias en github (o en cualquier repo, claro)
+
 ##Funcionamiento
 
 Toma los números de un archivo (los dígitos de PI, en este caso) y los usa para crear un archivo de descripción del tipo "El 1 dígito de PI es tres.", añadiéndolos línea a línea y haciéndo un add y un commit cada vez.
