@@ -1,11 +1,13 @@
 #!/bin/bash
 
-archivo_entrada="micro_pi_test"
+archivo_entrada="10000pi.txt"
 archivo_salida="pi_description"
 
 i=0
+cadamil=0
 
 while read -n 1 caracter
+
 do
     case $caracter in
         1)
@@ -42,11 +44,20 @@ do
         palabra="algo que no es un dígito"
     esac
 
-    ((i+=1)) 
+    ((i+=1))
+    ((cadamil+=1))
     echo "El $i dígito de PI es $palabra." >> $archivo_salida
     git add $archivo_salida
     git commit -m "Agregado el $i dígito de PI a $archivo_salida"
 
+    #Hace un push cada 1000 commits
+    if [[ "$cadamil" -eq 1000 ]]; then
+         echo "push"
+        git push
+        cadamil=0
+    fi
+
 done < "$archivo_entrada"
 
 git push
+
