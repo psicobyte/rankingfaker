@@ -70,11 +70,14 @@ do
     #Hace un push cada 1000 commits
     if [[ "$cadamil" -eq 1000 ]]; then
          echo "push"
+
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad)
 #        git push
         cadamil=0
     fi
 
 done < "$archivo_entrada"
 
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad):
 #git push
 
