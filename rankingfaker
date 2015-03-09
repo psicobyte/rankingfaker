@@ -17,6 +17,8 @@
 #       You should have received a copy of the GNU General Public License
 #       along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# 		About bash arrays TLDP http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html
+
 archivo_entrada="10000pi.txt"
 archivo_salida="pi_description"
 
