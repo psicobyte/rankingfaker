@@ -6,6 +6,10 @@ Dicho de otro modo, como pone en el propio código:
 
 > rankingfaker es una aplicación estúpida para hacer contribuciones espúrias en github (o en cualquier repo, claro)
 
+## Adevertencia
+
+**Aparta tus manazas de aquí: Ejecutar este script inconscientemente hará que se envíen (push) 10K de commits a este repositorio**
+
 ##Funcionamiento
 
 Toma los números de un archivo (los dígitos de PI, en este caso) y los usa para crear un archivo de descripción del tipo "El 1 dígito de PI es tres.", añadiéndolos línea a línea y haciéndo un add y un commit cada vez.
