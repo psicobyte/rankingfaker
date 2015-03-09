@@ -23,46 +23,23 @@ archivo_salida="pi_description"
 i=0
 cadamil=0
 
+palabras=(cero uno dos tres cuatro cinco seis siete ocho nueve)
+
 while read -n 1 caracter
 
 do
-    case $caracter in
-        1)
-        palabra="uno"
-        ;;
-        2)
-        palabra="dos"
-        ;;
-        3)
-        palabra="tres"
-        ;;
-        4)
-        palabra="cuatro"
-        ;;
-        5)
-        palabra="cinco"
-        ;;
-        6)
-        palabra="seis"
-        ;;
-        7)
-        palabra="siete"
-        ;;
-        8)
-        palabra="ocho"
-        ;;
-        9)
-        palabra="nueve"
-        ;;
-        0)
-        palabra="cero"
-        ;;
-        *)
-        palabra="algo que no es un dígito"
-    esac
+	palabra=""
+	if [ "x$caracter" != "x." ]
+	then
+		palabra=${palabras[$caracter]}
+
+	else
+		palabra="punto"
+	fi
 
     ((i+=1))
     ((cadamil+=1))
+
     echo "El $i dígito de PI es $palabra." >> $archivo_salida
     git add $archivo_salida
     git commit -m "Agregado el $i dígito de PI a $archivo_salida"
