@@ -45,15 +45,17 @@ do
     echo "El $i dígito de PI es $palabra." >> $archivo_salida
     git add $archivo_salida
     git commit -m "Agregado el $i dígito de PI a $archivo_salida"
-
     #Hace un push cada 1000 commits
     if [[ "$cadamil" -eq 1000 ]]; then
          echo "push"
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad)         
 #        git push
         cadamil=0
     fi
 
 done < "$archivo_entrada"
 
-#git push
-
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad):		
+ #git push		 #git push
+ 		 
+# Dice JJ que commitear por un simple comentario es trampa. Pues eso		
