@@ -18,7 +18,9 @@ Cada 1000 dígitos hace un push (porque el número máximo de contribuciones que
 
 ## Modo de Uso
 
-Copia el fichero a un repositorio propio (clonarlo no sirve, porque los cambios sobre un repo clonado no cuentan como contribución) y ejecuta el script rankingfaker en ese mismo directorio.
+Copia los ficheros a un repositorio propio (clonarlo no sirve, porque los cambios sobre un repo clonado no cuentan como contribución) y ejecuta el script rankingfaker en ese mismo directorio.
+
+Descomenta las dos órdenes push (están comentados para evitar accidentes).
 
 Si no tienes habilitadas las claves ssh te pedirá usuario y contraseña a cada push. Si las tienes habilitadas lo hará directamente.
 
