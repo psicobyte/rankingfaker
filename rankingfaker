@@ -81,3 +81,4 @@ done < "$archivo_entrada"
 # descomenta esto para que el programa haga push automáticamente (comentado por seguridad):
 #git push
 
+# Dice JJ que commitear por un simple comentario es trampa. Pues eso
