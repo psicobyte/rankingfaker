@@ -8,7 +8,7 @@ Dicho de otro modo, como pone en el propio código:
 
 ## Adevertencia
 
-**Aparta tus manazas de aquí: Ejecutar este script inconscientemente hará que se envíen (push) 10K de commits a este repositorio**
+**Aparta tus manazas de aquí: Ejecutar este script inconscientemente hará que se envíen (push) 10K de commits a este repositorio. Y luego vendrás a quejarte, so inconsciente**
 
 ##Funcionamiento
 
@@ -20,8 +20,14 @@ Cada 1000 dígitos hace un push (porque el número máximo de contribuciones que
 
 Copia el fichero a un repositorio propio (clonarlo no sirve, porque los cambios sobre un repo clonado no cuentan como contribución) y ejecuta el script rankingfaker en ese mismo directorio.
 
+Si no tienes habilitadas las claves ssh te pedirá usuario y contraseña a cada push. Si las tienes habilitadas lo hará directamente.
+
 10K contribuciones en un momento.
 
-## Utilidad
+## Utilidad primaria
 
 Ascender ilegítimamente y de forma cómoda en el Top de usuarios de github de JJ merelo https://github.com/JJ/top-github-users-data
+
+## Utilidad real
+
+Es una coña.
