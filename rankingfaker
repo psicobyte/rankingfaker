@@ -70,11 +70,11 @@ do
     #Hace un push cada 1000 commits
     if [[ "$cadamil" -eq 1000 ]]; then
          echo "push"
-        git push
+#        git push
         cadamil=0
     fi
 
 done < "$archivo_entrada"
 
-git push
+#git push
 
