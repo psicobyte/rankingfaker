@@ -17,68 +17,45 @@
 #       You should have received a copy of the GNU General Public License
 #       along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# 		About bash arrays TLDP http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html
+
 archivo_entrada="10000pi.txt"
 archivo_salida="pi_description"
 
 i=0
 cadamil=0
 
+palabras=(cero uno dos tres cuatro cinco seis siete ocho nueve)
+
 while read -n 1 caracter
 
 do
-    case $caracter in
-        1)
-        palabra="uno"
-        ;;
-        2)
-        palabra="dos"
-        ;;
-        3)
-        palabra="tres"
-        ;;
-        4)
-        palabra="cuatro"
-        ;;
-        5)
-        palabra="cinco"
-        ;;
-        6)
-        palabra="seis"
-        ;;
-        7)
-        palabra="siete"
-        ;;
-        8)
-        palabra="ocho"
-        ;;
-        9)
-        palabra="nueve"
-        ;;
-        0)
-        palabra="cero"
-        ;;
-        *)
-        palabra="algo que no es un dígito"
-    esac
+	palabra=""
+	if [ "x$caracter" != "x." ]
+	then
+		palabra=${palabras[$caracter]}
+
+	else
+		palabra="punto"
+	fi
 
     ((i+=1))
     ((cadamil+=1))
+
     echo "El $i dígito de PI es $palabra." >> $archivo_salida
     git add $archivo_salida
     git commit -m "Agregado el $i dígito de PI a $archivo_salida"
-
     #Hace un push cada 1000 commits
     if [[ "$cadamil" -eq 1000 ]]; then
          echo "push"
-
-# descomenta esto para que el programa haga push automáticamente (comentado por seguridad)
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad)         
 #        git push
         cadamil=0
     fi
 
 done < "$archivo_entrada"
 
-# descomenta esto para que el programa haga push automáticamente (comentado por seguridad):
+# descomenta esto para que el programa haga push automáticamente (comentado por seguridad):		
 #git push
-
-# Dice JJ que commitear por un simple comentario es trampa. Pues eso
+ 		 
+# Dice JJ que commitear por un simple comentario es trampa. Pues eso		
